@@ -1,0 +1,64 @@
+.footer {
+  z-index: 10;
+  background-color: #3c3c3c;
+  &__container {
+    margin: 0 auto;
+    padding: 50px 0;
+    @media (max-width: $md3) {
+      padding: 35px 0;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__logo {
+    transform: translate(0, 100%);
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  &__networks {
+    padding: 40px 0 30px 0;
+    @media (max-width: $md3) {
+      padding: 35px 0 25px 0;
+    }
+    a {
+      display: inline-block;
+      padding: 0 10px;
+      font-family: $fontfamily;
+      color: #a4a4a4;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: #fff;
+      }
+    }
+    transform: translate(0, 80%);
+    opacity: 0;
+    transition: all 1.2s ease 0.2s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  &__copy {
+    font-family: $fontfamily;
+    color: #6c6c6c;
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 1.2s ease 0.4s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+}
